@@ -9,11 +9,6 @@ public class AddressBook {
 	Scanner scanner = new Scanner(System.in);
 	static AddressBook book = new AddressBook();
 
-	public static void main(String[] args) {
-		System.out.println("Welcome to Address Book Program");
-		book.getUserChoice();
-	}
-
 	private ContactPerson getUserInput() {
 		System.out.print("Enter FirstName:");
 		String FirstName = scanner.next();
@@ -52,7 +47,7 @@ public class AddressBook {
 		return person;
 	}
 
-	private void getUserChoice() {
+	public void getUserChoice() {
 		boolean isTerminate = false;
 		while (!isTerminate) {
 			System.out.println("1:Adding new person \n" + "2:Print address book \n" + "3:Update the person details \n "
